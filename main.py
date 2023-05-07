@@ -10,12 +10,12 @@ import pickle
 import requests
 
 # load the nlp model and tfidf vectorizer from disk
-filename = '/Users/cheesystoner/Desktop/AJAX-Movie-Recommendation-System-with-Sentiment-Analysis-master/nlp_model.pkl'
+filename = 'nlp_model.pkl'
 clf = pickle.load(open(filename, 'rb'))
-vectorizer = pickle.load(open('/Users/cheesystoner/Desktop/AJAX-Movie-Recommendation-System-with-Sentiment-Analysis-master/tranform.pkl','rb'))
+vectorizer = pickle.load(open('tranform.pkl','rb'))
 
 def create_similarity():
-    data = pd.read_csv('main_data.csv/Users/cheesystoner/Desktop/AJAX-Movie-Recommendation-System-with-Sentiment-Analysis-master/main_data.csv')
+    data = pd.read_csv('main_data.csv')
     # creating a count matrix
     cv = CountVectorizer()
     count_matrix = cv.fit_transform(data['comb'])
@@ -51,7 +51,7 @@ def convert_to_list(my_list):
     return my_list
 
 def get_suggestions():
-    data = pd.read_csv('/Users/cheesystoner/Desktop/AJAX-Movie-Recommendation-System-with-Sentiment-Analysis-master/main_data.csv')
+    data = pd.read_csv('main_data.csv')
     return list(data['movie_title'].str.capitalize())
 
 app = Flask(__name__)

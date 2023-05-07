@@ -23,12 +23,12 @@
 <body id="content">
 	<div class="results">
 	    <center>
-	      <h2 id="name" class="text-uppercase">{{title}}</h2>
+	      <h2 id="name" class="text-uppercase" style="background-color: black;">{{title}}</h2>
 	    </center>
 	</div>
 	<br>
 
-<div id="mycontent">
+<div id="mycontent" style="background-color: rgba(0, 0, 0, 0.742);">
     <div id="mcontent">
       <div class="poster-lg">
         <img class="poster" style="border-radius: 40px;margin-left: 90px;" height="400" width="250" src={{poster}}>
@@ -84,7 +84,6 @@
   <div class="movie" style="color: #E8E8E8;">
     	<center>
 		<h3>TOP CAST</h3>
-		<h5>(Click on the cast to know more)</h5>
 	</center>
   </div>
 
@@ -94,7 +93,7 @@
             <div class="imghvr">
               <img class="card-img-top cast-img" id="{{details[0]}}" height="360" width="240" alt="{{name}} - profile" src="{{details[2]}}">
               <figcaption class="fig">
-                <button class="card-btn btn btn-danger"> Know More </button>
+                <button class="card-btn btn btn-danger" style="background-color: #395fec; border-color: #0831e8;"> Know More </button>
               </figcaption>
             </div>
             <div class="card-body">
@@ -110,7 +109,7 @@
     {% if reviews %}
     <h2 style="color:white">USER REVIEWS</h2>
      <div class="col-md-12" style="margin: 0 auto; margin-top:25px;">
-        <table class="table table-bordered" bordercolor="white" style="color:white">
+        <table class="table table-bordered" bordercolor="white" style="color:white;background-color:#000000c8;">
             <thead>
                 <tr>
                     <th class="text-center" scope="col" style="width: 75%">Comments</th>
@@ -120,7 +119,7 @@
     
             <tbody>
 		      {% for review, status in reviews.items() if not reviews.hidden %}
-		      <tr style="background-color:#e5091485;">
+		      <tr>
               	  <td>{{review}}</td>
 	              <td><center>
 	                  {{status}} : 
@@ -146,8 +145,8 @@
       {% if movie_cards|length > 1 %}
 
 
-      <div class="movie" style="color: #E8E8E8;">
-      <center><h3>RECOMMENDED MOVIES FOR YOU</h3><h5>(Click any of the movies to get recommendation)</h5></center>
+      <div class="movie" style="color: #E8E8E8; background-color: rgba(0, 0, 0, 0.715);">
+      <center><h3>RECOMMENDED MOVIES FOR YOU</h3></center>
     </div>
 
     <div class="movie-content">
@@ -156,7 +155,7 @@
           <div class="imghvr">
             <img class="card-img-top" height="360" width="240" alt="{{title}} - poster" src={{poster}}>
             <figcaption class="fig">
-              <button class="card-btn btn btn-danger"> Click Me </button>
+              <button class="card-btn btn btn-danger" style="background-color: #395fec; border-color: #0831e8;"> Click Me </button>
             </figcaption>
            </div>
           <div class="card-body">
