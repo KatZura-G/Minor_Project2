@@ -1,17 +1,16 @@
-# Movie Recommendation System using ML(for Minor Project - 1)
+# Movie Recommendation System using ML(for Minor Project - 2)
 
 ![Python](https://img.shields.io/badge/Python-3.8-blueviolet)
 ![Framework](https://img.shields.io/badge/Framework-Flask-red)
 ![Frontend](https://img.shields.io/badge/Frontend-HTML/CSS/JS-green)
 ![API](https://img.shields.io/badge/API-TMDB-fcba03)
 
-**Updated version of this application can be found at:** https://github.com/KatZura-G/MP1_6508
 
 Content Based Recommender System recommends movies similar to the movie user likes and analyses the sentiments on the reviews given by the user for that movie.
 
 The details of the movies(title, genre, runtime, rating, poster, etc) are fetched using an API by TMDB, https://www.themoviedb.org/documentation/api, and using the IMDB id of the movie in the API.
 
-Source Code: https://github.com/KatZura-G/MP1_6508
+Source Code: https://github.com/KatZura-G/Minor_Project2
 
 ## How to get the API key?
 
